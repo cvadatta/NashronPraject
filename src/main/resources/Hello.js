@@ -8,8 +8,9 @@ var sumofnums=function(a,b){
     var myclass=Java.type("JavaScriptExec");
     print("sum of two numbers is : " + myclass.sumoftwonums(a,b));
 }
-var sammy = {
-  "first_name"  :  "Sammy",
-  "last_name"   :  "Shark",
-  "online"      :  true
+
+
+function receiveJson(data) {
+   var obj = JSON.parse(data);
+   print(obj.firstName);
 }

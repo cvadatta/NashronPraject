@@ -1,3 +1,5 @@
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import javax.script.*;
@@ -18,13 +20,25 @@ public class JavaScriptExec {
 
         invocable.invokeFunction("sumofnums",10,20);
 
-        //ObjectNode json = sammy();
-        //System.out.println(js.toString());
+        ObjectNode data = createJsonNode();
+        invocable.invokeFunction("receiveJson",data);
+
+
 
     }
 
     public static int sumoftwonums(int a,int b){
         return a+b;
+    }
+
+    public static ObjectNode createJsonNode() {
+        ObjectMapper objectMapper = new ObjectMapper(new JsonFactory());
+        ObjectNode objectNode = objectMapper.createObjectNode();
+
+        objectNode.put("firstName", "Siva");
+        objectNode.put("lastName", "Datta");
+
+        return objectNode;
     }
 
 }
