@@ -9,7 +9,7 @@ var sumofnums=function(a,b){
     print("sum of two numbers is : " + myclass.sumoftwonums(a,b));
 }
 
-//Json object
+//Json object used
 function receiveJson(data) {
    var obj = JSON.parse(data);
    print(obj.firstName);
