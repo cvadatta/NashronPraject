@@ -24,7 +24,6 @@ public class JavaScriptExec {
         invocable.invokeFunction("receiveJson",data);
 
 
-
     }
 
     public static int sumoftwonums(int a,int b){
