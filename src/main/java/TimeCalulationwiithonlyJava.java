@@ -6,7 +6,7 @@ public class TimeCalulationwiithonlyJava {
             long starttime=System.nanoTime();
             System.out.println("Hello World!! Using only JAVA!!");
             long estimatedtime=System.nanoTime() -starttime;
-            System.out.println("Time taken for simple java program is:"+estimatedtime);
+            //System.out.println("Time taken for simple java program is:"+estimatedtime);
             avgonlyjava+=estimatedtime/1000;
         }
         System.out.println(avgonlyjava);
