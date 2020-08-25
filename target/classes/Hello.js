@@ -11,5 +11,7 @@ var sumofnums=function(a,b){
 
 //Json object from java
 function receiveJson(data) {
+    print(typeof data);
    print(data.get("firstName").asText());
 }
+
