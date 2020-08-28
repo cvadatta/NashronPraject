@@ -1,2 +1,4 @@
 # NashronProject
-My First repository in Git Hub
+My First repository in Git Hub;
+
+Calculated 
