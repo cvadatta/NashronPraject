@@ -2,7 +2,7 @@ var tch=function(){
     var uril = 'https://egov-micro-dev.egovernments.org/egov-mdms-service/v1/_search';
 
     // post body data
-    const user = {
+    var user = {
       "RequestInfo": {},
       "MdmsCriteria": {
         "tenantId": "pb",
@@ -20,7 +20,7 @@ var tch=function(){
       }
     };
     // request options
-    const options = {
+    var options = {
         method: 'POST',
         body: JSON.stringify(user),
         headers: {
@@ -32,4 +32,15 @@ var tch=function(){
     fetch(uril, options)
         .then(res => res.json())
         .then(res => console.log(res));
+
+/*
+    fetch(uril, options)
+            .then(function(response){
+                return response.json();
+            } )
+            .then(function(responseBody) {
+                console.log(responseBody)
+            });
+
+        */
 }

@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
@@ -19,11 +20,15 @@ public class ReturnTask {
         ObjectNode data = createJsonNode();
         //invocable.invokeFunction("receiveJson",data);
         Object res=invocable.invokeFunction("returnsJson",data);
-        //System.out.println(res);
-        //System.out.println(res.getClass());
+        System.out.println(res);
+        System.out.println(res.getClass());
+        System.out.println(res.toString());
         ObjectMapper mapper=new ObjectMapper();
         String fin=mapper.writeValueAsString(res);
         System.out.println(fin);
+
+        JsonNode jsonNode = mapper.readTree(fin);
+        System.out.println(jsonNode.toString());
 
 
     }
